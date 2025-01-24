@@ -2,6 +2,39 @@
 
 [![LGTM](https://lgtm.lol/p/394)](https://lgtm.lol/i/394)
 
+### USE
+```bash
+$ mbti-check-type
+Usage: mbti-check-type [OPTIONS] MBTI
+Try 'mbti-check-type --help' for help.
+╭─ Error ────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Missing argument 'MBTI'.                                                                               │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+$ mbti-check-type --help
+
+ Usage: mbti-check-type [OPTIONS] MBTI
+
+╭─ Arguments ────────────────────────────────────────────────────────────────────────────────────────────╮
+│ *    mbti      TEXT  [default: None] [required]                                                        │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Options ──────────────────────────────────────────────────────────────────────────────────────────────╮
+│ --help          Show this message and exit.                                                            │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+$ mbti-check-type ISFP
+권력형
+```
+
+#### check_type(mbti: str)
+```bash
+$ pip install DataFollowers-MBTI
+$ python
+>>> from mbti.cli import check_type
+>>> check_type("ISFP")
+'성인군자형'
+``` 
+
 ### DEV
 ```bash
 $ source .venv/bin/activate
