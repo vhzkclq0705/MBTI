@@ -22,5 +22,9 @@ types = {
 def check_type(mbti: str):
     return types[mbti]
 
+def print_check_type(mbti: str):
+    checked_type = check_type(mbti)
+    print(checked_type)
+
 def entry_point():
-    typer.run(check_type)
+    typer.run(print_check_type)
