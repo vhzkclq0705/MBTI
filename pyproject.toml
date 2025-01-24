@@ -14,6 +14,8 @@ license = {text = "MIT"}
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
 
+[project.scripts]
+mbti-check-type = "mbti.cli:entry_point_cnt"
 
 [tool.pdm]
 distribution = true
