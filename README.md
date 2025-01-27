@@ -23,14 +23,14 @@ $ mbti-check-type --help
 ╰────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 $ mbti-check-type ISFP
-권력형
+성인군자형
 ```
 
 #### check_type(mbti: str)
 ```bash
 $ pip install DataFollowers-MBTI
 $ python
->>> from mbti.cli import check_type
+>>> from mbti import check_type
 >>> check_type("ISFP")
 '성인군자형'
 ``` 
