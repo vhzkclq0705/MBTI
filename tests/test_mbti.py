@@ -1,8 +1,11 @@
-from mbti.cli import check_type
+from mbti.cli import check_country_mbti_ratio
+import pandas as pd
 import pytest
 
-def test_check_type():
-    mbti_type = check_type("ISFP")
+def test_check_country_mbti_ratio():
+    mbti = "ISFP"
+    rcnt = 10
+    df = check_country_mbti_ratio(mbti=mbti, rcnt=rcnt)
 
-    assert mbti_type is not None
-    assert len(mbti_type) > 2
+    assert isinstance(df, pd.DataFrame)
+    assert mbti in df.columns
