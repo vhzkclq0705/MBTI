@@ -25,7 +25,7 @@ types = {
 # 
 # parameter
 # :country: 나라 명(영문)
-def check_country_mbti_ratio(country: str):
+def check_country_mbti_ratio(country: str, mbti: str, asc: bool=False, rcnt: int=10):
     
     # 현재 파일(cli.py)의 디렉토리 경로 (src/mbti)
     # 절대 경로로 불러오기 위해 다음과 같이 경로 설정
@@ -46,8 +46,8 @@ def print_check_type(mbti: str):
     checked_type = check_type(mbti)
     print(checked_type)
 
-def print_check_country_ratio(country: str):
-    result = check_country_mbti_ratio(country)
+def print_check_country_ratio(country: str, mbti: str, asc: bool=False, rcnt: int=10):
+    result = check_country_mbti_ratio(country, mbti, asc, rcnt)
     print(result)
 
 def entry_point():
