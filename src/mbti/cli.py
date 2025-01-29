@@ -2,25 +2,6 @@ import pandas as pd
 import typer
 import os
 
-types = {
-    "ISTP": "백과사전형",
-    "ISFP": "성인군자형",
-    "ISTJ": "소금형",
-    "ISFJ": "권력형",
-    "INFJ": "예언자형",
-    "INTJ": "과학자형",
-    "INFP": "잔다르크형",
-    "INTP": "아이디어형",
-    "ESTP": "활동가형",
-    "ESFP": "사교형",
-    "ENFP": "스파크형",
-    "ENTP": "발명가형",
-    "ESTJ": "사업가형",
-    "ESFJ": "친선도모형",
-    "ENFJ": "언변능숙형",
-    "ENTJ": "지도자형"
-}
-
 def check_country_mbti_ratio(mbti: str, asc: bool=False, rcnt: int=10) -> pd.DataFrame:
     """   
     특정 MBTI 유형을 기준으로 나라별 비율을 보여주는 함수
@@ -65,19 +46,9 @@ def convert_dataframe(df: pd.DataFrame) -> pd.DataFrame:
 
     return gdf
 
-def check_type(mbti: str):
-    return types[mbti]
-
-def print_check_type(mbti: str):
-    checked_type = check_type(mbti)
-    print(checked_type)
-
 def print_check_country_ratio(mbti: str, asc: bool=False, rcnt: int=10):
     result = check_country_mbti_ratio(mbti, asc, rcnt)
     print(result.to_string(index=False))
-
-def entry_point():
-    typer.run(print_check_type)
 
 def entry_point_country():
     typer.run(print_check_country_ratio)

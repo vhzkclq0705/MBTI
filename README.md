@@ -44,24 +44,7 @@ $ mbti-check-country-ratio ISFP --asc -rcnt 5
     Serbia  2.71
 Montenegro  2.75
    Georgia  2.75
-
-$ mbti-check-type
-Usage: mbti-check-type [OPTIONS] MBTI
-Try 'mbti-check-type --help' for help.
-╭─ Error ────────────────────────────────────────────────────────────────────────────────────────────────╮
-│ Missing argument 'MBTI'.                                                                               │
-╰────────────────────────────────────────────────────────────────────────────────────────────────────────╯
-
-$ mbti-check-type --help
-
- Usage: mbti-check-type [OPTIONS] MBTI
-
-╭─ Arguments ────────────────────────────────────────────────────────────────────────────────────────────╮
-│ *    mbti      TEXT  [default: None] [required]                                                        │
-╰────────────────────────────────────────────────────────────────────────────────────────────────────────╯
-╭─ Options ──────────────────────────────────────────────────────────────────────────────────────────────╮
-│ --help          Show this message and exit.                                                            │
-╰────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+```
 
 #### check_country_mbti_ratio(mbti: str, asc: bool=False, rcnt: int=10)
 ```bash

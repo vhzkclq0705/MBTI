@@ -15,7 +15,6 @@ requires = ["pdm-backend"]
 build-backend = "pdm.backend"
 
 [project.scripts]
-mbti-check-type = "mbti.cli:entry_point"
 mbti-check-country-ratio = "mbti.cli:entry_point_country"
 
 [tool.pdm]
