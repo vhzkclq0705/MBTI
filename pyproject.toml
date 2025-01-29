@@ -5,7 +5,7 @@ description = "Default template for PDM package"
 authors = [
     {name = "vhzkclq0705", email = "vhzkclq0705@naver.com"},
 ]
-dependencies = ["typer>=0.15.1", "pytest>=8.3.4"]
+dependencies = ["typer>=0.15.1", "pytest>=8.3.4", "pandas>=2.2.3"]
 requires-python = ">=3.10"
 readme = "README.md"
 license = {text = "MIT"}
@@ -16,6 +16,7 @@ build-backend = "pdm.backend"
 
 [project.scripts]
 mbti-check-type = "mbti.cli:entry_point"
+mbti-check-country-ratio = "mbti.cli:entry_point_country"
 
 [tool.pdm]
 distribution = true

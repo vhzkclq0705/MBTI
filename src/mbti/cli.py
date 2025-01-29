@@ -1,3 +1,4 @@
+import pandas as pd
 import typer
 import os
 
@@ -45,5 +46,12 @@ def print_check_type(mbti: str):
     checked_type = check_type(mbti)
     print(checked_type)
 
+def print_check_country_ratio(country: str):
+    result = check_country_mbti_ratio(country)
+    print(result)
+
 def entry_point():
     typer.run(print_check_type)
+
+def entry_point_country():
+    typer.run(print_check_country_ratio)
