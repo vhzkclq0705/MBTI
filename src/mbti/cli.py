@@ -39,7 +39,10 @@ def convert_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     df.columns = df.columns.str.replace('-A', '').str.replace('-T', '')
 
     # 같은 MBTI 유형을 그룹화
-    gdf = df.groupby(df.columns, axis=1).sum()
+    # grouby에서 axis=1이 사라질 예정이라 경고문이 나와 수정
+    # 기존 코드
+    # gdf = df.groupby(df.columns, axis=1).sum()
+    gdf = df.T.groupby(df.T.index).sum().T
 
     # 각 비율을 백분율로 환산
     gdf.iloc[:, 1:] *= 100
