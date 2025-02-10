@@ -17,7 +17,7 @@ class Specific_manager:
 
     def get_specific_data(self, country: str, mbti: str) -> str:
         data = self.db.select_specific_data(country=country, mbti=mbti)
-        percentage = data[0][0]
+        percentage = round(float(data[0][0]), 2)
 
         return f'{country}의 {mbti} 비율은 {percentage}% 입니다.'
     
