@@ -17,7 +17,7 @@ class Database:
 
     def select_data(self) -> list:
         query = '''
-        SELECT *
+        SELECT country, mbti, percentage
         FROM countries_mbti
         '''
         self.execute_query(query)
